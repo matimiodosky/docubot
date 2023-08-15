@@ -14,8 +14,8 @@ copy `config.template.json` into `config.json`. There you can configure:
 
 ### Build embeddings
 
-`node build.js`
+`node src/build.js`
 
 ## Run
 
-`node chat.js`
+`node src/chat.js`

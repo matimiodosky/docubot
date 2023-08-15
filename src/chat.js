@@ -1,10 +1,10 @@
 const {ContextProvider} = require('./contextProvider')
 const {Configuration, OpenAIApi} = require("openai");
-const config = require('./config.json')
+const config = require('../config.json')
 class Chat {
 
     constructor() {
-        this.contextProvider = new ContextProvider('./embeddings.json', './chunks.json', 8)
+        this.contextProvider = new ContextProvider('../embeddings.json', '../chunks.json', 8)
         const configuration = new Configuration({
             apiKey: process.env.OPEN_AI_API_KEY
         });
