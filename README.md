@@ -1,3 +1,7 @@
+## Docubot
+
+This is a training-free, domain specific, chatbot powered by ChatGPT that consumes API specs to answer specific questions.
+
 ## How to run?
 
 ### Set environment variable
