@@ -18,7 +18,7 @@ class Chat {
         console.log('getting context... done')
         console.log('getting answer')
         const answer  = await this.openai.createChatCompletion({
-            model: "gpt-3.5-turbo",
+            model: "gpt-3.5-turbo-16k",
             messages: [
                 {
                     "role": "system",
@@ -31,7 +31,11 @@ class Chat {
             ]
         })
 
-        console.log('Avetta: ' + answer.data.choices[0].message.content)
+        const response = answer.data.choices[0].message.content
+
+        console.log('Response: ' + response)
+
+        return response
     };
 
 
@@ -43,4 +47,6 @@ const run = async () => {
     await chat.question(config.question)
 }
 
-run()
+// run()
+
+module.exports = {Chat}

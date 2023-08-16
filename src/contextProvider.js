@@ -41,6 +41,9 @@ class ContextProvider {
 
         const embedder = new Embedder()
         const embedding = await embedder.calculateEmbedding(question)
+            .catch(e => {
+                return e
+            })
 
         const closestHashes = this.getTopClosestEmbeddings(embedding)
         const closestChunks = []
